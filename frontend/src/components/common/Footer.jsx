@@ -65,10 +65,17 @@ const Footer = () => {
                     {/* Brand Identity */}
                     <div className="lg:col-span-4">
                         <NavLink to="/" className="flex items-center gap-3 mb-6 md:mb-8">
+                            {/* Previous Branding
                             <div className="w-8 h-8 bg-[#0071e3] text-white rounded-full flex items-center justify-center font-black text-sm">
                                 S
                             </div>
                             <span className="text-xl font-bold tracking-tighter text-[#1d1d1f]">SeoIndia</span>
+                            */}
+                            <img
+                                src="/images/v4m-logo-full.png"
+                                alt="Value4Media"
+                                className="h-12 md:h-16 w-auto object-contain hover:scale-105 transition-transform duration-300"
+                            />
                         </NavLink>
                         <p className="text-[#86868b] text-base md:text-lg leading-relaxed mb-8 md:mb-10 max-w-sm font-medium">
                             We build the search engines of tomorrow, today. Engineering digital dominance for the next generation of industry leaders.
@@ -135,7 +142,7 @@ const Footer = () => {
                                 <Mail size={16} className="text-[#0071e3] shrink-0" /> seoIndia@value4media.com
                             </div>
                             <div className="flex items-center gap-3 text-[#86868b] text-[11px] md:text-sm font-bold tracking-widest uppercase">
-                                <MapPin size={16} className="text-[#0071e3] shrink-0" /> Cyber Hub, DLF Phase 3, GGM
+                                <MapPin size={16} className="text-[#0071e3] shrink-0" /> Block B, Sector 132, Noida, Uttar Pradesh 201304
                             </div>
                         </div>
                     </div>
@@ -144,7 +151,7 @@ const Footer = () => {
                 {/* Legal Bottom */}
                 <div className="border-t border-black/5 pt-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
                     <p className="text-[9px] font-black text-[#86868b] uppercase tracking-[0.2em]">
-                        © {currentYear} SeoIndia. Value4Media Strategic Group.
+                        © {currentYear} Value4Media. All Rights Reserved.
                     </p>
                     <div className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-10">
                         {['Privacy Protocol', 'Service Agreement', 'Cookie Engine'].map(item => (

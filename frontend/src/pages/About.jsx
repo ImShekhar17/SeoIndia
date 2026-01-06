@@ -72,7 +72,7 @@ const About = () => {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="text-[#86868b] text-xl md:text-2xl font-medium leading-relaxed mb-12 max-w-2xl"
                         >
-                            Founded in 2024 at the intersection of extreme data science and creative engineering, SeoIndia was built to redefine how high-growth enterprises command digital visibility.
+                            Founded in 2024 at the intersection of extreme data science and creative engineering, Value4Media was built to redefine how high-growth enterprises command digital visibility.
                         </motion.p>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {highlights.map((h, i) => (

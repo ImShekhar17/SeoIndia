@@ -67,8 +67,8 @@ const Counter = ({ value }) => {
 
 const Home = () => {
     useSEO(
-        "Organic SEO Service in India",
-        "Scale your digital empire with SEO India. We engineer search dominance for high-growth tech companies using data-driven enterprise SEO strategies."
+        "Organic SEO Service in India | Value4Media",
+        "Scale your digital empire with Value4Media. We engineer search dominance for high-growth tech companies using data-driven enterprise SEO strategies."
     );
 
     const stats = [
@@ -102,7 +102,7 @@ const Home = () => {
                             className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6 md:mb-10 text-[#1d1d1f]"
                         >
                             Scale Your Digital <br />
-                            <span className="text-gradient">Empire with SeoIndia</span>
+                            <span className="text-gradient">Empire with Value4Media</span>
                         </motion.h1>
 
                         <motion.p

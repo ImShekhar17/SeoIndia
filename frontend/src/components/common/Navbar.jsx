@@ -134,10 +134,17 @@ const Navbar = () => {
 
                     {/* Logo */}
                     <NavLink to="/" className="flex items-center gap-2 md:gap-3 shrink-0">
+                        {/* Previous Branding
                         <div className="w-8 h-8 md:w-9 md:h-9 bg-[#0071e3] text-white rounded-full flex items-center justify-center font-black text-base md:text-lg">
                             S
                         </div>
                         <span className={`text-lg md:text-xl font-bold tracking-tight text-[#1d1d1f]`}>SeoIndia</span>
+                        */}
+                        <img
+                            src="/images/v4m-logo-full.png"
+                            alt="Value4Media"
+                            className="h-12 md:h-16 w-auto object-contain hover:scale-105 transition-transform duration-300"
+                        />
                     </NavLink>
 
                     {/* Desktop Nav */}

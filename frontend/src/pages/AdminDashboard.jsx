@@ -39,7 +39,7 @@ const AdminDashboard = () => {
             html: `
 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden;">
     <div style="background-color: #232f3e; padding: 20px; text-align: center;">
-        <h1 style="color: #ffffff; margin: 0;">SeoIndia Intelligence</h1>
+        <h1 style="color: #ffffff; margin: 0;">Value4Media Intelligence</h1>
     </div>
     <div style="padding: 30px; line-height: 1.6; color: #374151;">
         <h2 style="color: #111827;">What's New This Month?</h2>
@@ -53,7 +53,7 @@ const AdminDashboard = () => {
         <a href="#" style="display: inline-block; background-color: #febd69; color: #111827; padding: 12px 24px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 10px;">View Full Report</a>
     </div>
     <div style="background-color: #f9fafb; padding: 20px; text-align: center; border-top: 1px solid #e5e7eb; font-size: 12px; color: #9ca3af;">
-        &copy; 2026 SeoIndia. Value4Media Strategic Group.
+        &copy; 2026 Value4Media. All Rights Reserved.
     </div>
 </div>
             `.trim()
@@ -68,7 +68,7 @@ const AdminDashboard = () => {
     <p style="font-size: 16px; margin-bottom: 20px;">The landscape is changing. Are you observing?</p>
     <p style="font-size: 16px; margin-bottom: 32px;">Our neural analysis engine just processed 10M+ data points. The results were unexpected. We've optimized your strategy models accordingly.</p>
     <a href="#" style="color: #0071e3; text-decoration: none; font-weight: 500; font-size: 16px;">Access Command Center &rarr;</a>
-    <p style="font-size: 12px; color: #86868b; margin-top: 64px;">Sent from the SeoIndia Core Intelligence Unit.</p>
+    <p style="font-size: 12px; color: #86868b; margin-top: 64px;">Sent from the Value4Media Core Intelligence Unit.</p>
 </div>
             `.trim()
         },
@@ -83,7 +83,7 @@ const AdminDashboard = () => {
             <td style="padding: 40px; border-bottom: 4px solid #4f46e5;">
                 <table width="100%">
                     <tr>
-                        <td><h1 style="margin: 0; color: #0f172a; font-size: 28px; font-weight: 800; letter-spacing: -1px;">SEO INDIA</h1></td>
+                        <td><h1 style="margin: 0; color: #0f172a; font-size: 28px; font-weight: 800; letter-spacing: -1px;">VALUE4MEDIA</h1></td>
                         <td align="right" style="color: #64748b; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">Q1 Intelligence</td>
                     </tr>
                 </table>
@@ -537,7 +537,7 @@ const AdminDashboard = () => {
                 const a = document.createElement('a');
                 a.setAttribute('hidden', '');
                 a.setAttribute('href', url);
-                a.setAttribute('download', `SeoIndia_Full_Report_${new Date().toISOString().split('T')[0]}.csv`);
+                a.setAttribute('download', `Value4Media_Full_Report_${new Date().toISOString().split('T')[0]}.csv`);
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);

@@ -33,7 +33,7 @@ const Contact = () => {
                             {[
                                 { icon: <Mail />, title: 'Intelligence Channel', detail: 'seoIndia@value4media.com', sub: '24-hour response protocol' },
                                 { icon: <Phone />, title: 'Direct Access', detail: '+91 (800) SEO-INDIA', sub: 'Available for enterprise partners' },
-                                { icon: <MapPin />, title: 'HQ Coordinates', detail: 'Cyber Hub, Gurugram', sub: 'Strategic Operations Center' }
+                                { icon: <MapPin />, title: 'HQ Coordinates', detail: 'Sector 132, Noida', sub: 'Block B, UP 201304' }
                             ].map((item, i) => (
                                 <div key={item.title} className="flex gap-6 group">
                                     <div className="w-14 h-14 rounded-2xl bg-[#f5f5f7] border border-black/5 flex items-center justify-center text-[#0071e3] transition-all duration-500 shrink-0">

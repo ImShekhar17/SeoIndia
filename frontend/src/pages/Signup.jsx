@@ -50,7 +50,14 @@ const Signup = () => {
                 <div className="hidden lg:flex flex-col justify-center p-16 bg-[#0a1128] text-white relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600 rounded-full blur-[100px] opacity-20 -mr-32 -mt-32" />
                     <div className="relative z-10">
+                        {/* 
                         <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 rounded-xl mb-8 font-black text-xl">Si</div>
+                        */}
+                        <img
+                            src="/images/v4m-logo-icon.png"
+                            alt="Value4Media"
+                            className="h-10 md:h-12 w-auto object-contain mb-8 filter brightness-0 invert"
+                        />
                         <h2 className="text-4xl font-black mb-6 leading-tight">Start Your Journey to <span className="text-blue-400">SEO Excellence</span></h2>
                         <div className="space-y-6">
                             {[
@@ -77,7 +84,7 @@ const Signup = () => {
                     className="p-8 md:p-12 lg:p-16"
                 >
                     <div className="mb-8 md:mb-10 text-center lg:text-left">
-                        <h1 className="text-3xl font-black text-gray-900 mb-2">Join SeoIndia</h1>
+                        <h1 className="text-3xl font-black text-gray-900 mb-2">Join Value4Media</h1>
                         <p className="text-gray-500 font-medium lg:hidden">Create your account to get started</p>
                     </div>
 

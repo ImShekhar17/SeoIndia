@@ -116,6 +116,7 @@ function App() {
               <Route path="/case-studies/cannabis-seo" element={<Markets.CannabisSEO />} />
               <Route path="/case-studies/travel-seo" element={<Markets.TravelSEO />} />
               <Route path="/audit" element={<Audit />} />
+              <Route path="/audit/:id" element={<Audit />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />

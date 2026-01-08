@@ -66,8 +66,9 @@ The Admin Dashboard provides a premium system overview with real-time analytics.
 Designed for "1 hour or less" indexing and deep technical audits.
 
 ### ⚡ Meta-Grade Activation (Google Indexing API)
-- **Rapid Indexing**: Real integration with Google's Indexing API for URL notification.
-- **"Activate Site"**: Triggers a 15-60 minute ranking acceleration process.
+- **Rapid Indexing**: Real integration with Google's Indexing API v3 for "Russian Bot" speeds (5-60 min indexing).
+- **Persistent Links**: Audits now have unique, indexable routes at `/audit/:id`.
+- **"Activate Site"**: Triggers an internal report ping to Google from a verified domain.
 - **Actual Data**: No mocks. Uses the real Google production infrastructure.
 
 ### 🔍 Instant Intelligence
@@ -80,6 +81,7 @@ Designed for "1 hour or less" indexing and deep technical audits.
 ## 🛡️ Production-Grade Hardening
 
 - **Bulletproof URL Handling**: Safe parsing logic that prevents crashes from malformed inputs.
+- **Persistent Audit Fetching**: The `/audit/:id` route allows Googlebot (and users) to view reports directly from the database without re-running analysis.
 - **HTTPS Enforcement**: Automatically upgrades all target URLs to `https://` for secure auditing.
 - **Real-Time Data Sync**: Every dashboard metric pulls from live PostgreSQL results with automatic fallbacks.
 - **Omni-Responsive Design**: High-fidelity "Card View" for mobile, ensuring professional workflows on any device.
@@ -129,17 +131,19 @@ npm run dev
 - **Email**: `admin@gmail.com`
 - **Password**: `Samsung@5310`
 
-### 3. Activate Production Indexing
+### 3. Activate Production Indexing (Critical)
 > [!IMPORTANT]
 > To enable real-world indexing:
-> 1. Place your Google Service Account JSON key in `backend/indexing-key.json`.
-> 2. The system will switch from 'Simulation/Ready' to 'Live production' pings automatically.
+> 1. **Key Placement**: Place your Google Service Account JSON key in `backend/indexing-key.json`.
+> 2. **Domain Verification**: Upload the `googleXXX.html` file to `frontend/public/` and deploy to Vercel.
+> 3. **Owner Assignment**: Add the service account email (found in the JSON) as an **Owner** in Google Search Console for your domain.
+> 4. **One-Click Pings**: Once verified, clicking "Activate Indexing" in the dashboard will index your report internally.
 
 ---
 
 ## 🧪 Verification Steps
 1. **Check Console**: Look for `Admin account already exists` upon backend startup.
-2. **Access Control**: Navigate to the **Access** tab and create a custom role to verify RBAC integrity.
-3. **Trigger Indexing**: Click "Activate" on any audit and watch the real-time status update to "Indexed".
+2. **Persistent Audit**: Visit `/audit/[UUID]` directly to verify results load from DB.
+3. **Trigger Indexing**: Click "Activate" on any audit and watch the real-time status update.
 
 *(The platform is now ready for hyper-scale SEO operations)*

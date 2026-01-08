@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import api from '../services/api';
 import {
     XCircle, Smartphone, Globe, Layout, Gauge, Search, ListChecks, Rocket, Users
@@ -24,8 +24,9 @@ const Audit = () => {
         "Get a comprehensive SEO audit and technical analysis of your website visibility, performance, and backlink profile."
     );
     const location = useLocation();
+    const { id: paramId } = useParams();
     const url = location.state?.url || '';
-    const auditId = location.state?.id || null;
+    const auditId = location.state?.id || paramId || null;
     const [isLoading, setIsLoading] = useState(true);
     const [auditData, setAuditData] = useState(null);
     const [statusMessage, setStatusMessage] = useState('Initializing analysis...');
@@ -81,8 +82,11 @@ const Audit = () => {
             pollAudit(auditId);
         } else if (url) {
             startAudit();
+        } else if (!paramId) {
+            // No URL or ID provided - redirect back or show tool
+            setIsLoading(false);
         }
-    }, [url, auditId]);
+    }, [url, auditId, paramId]);
 
     const startAudit = async () => {
         try {

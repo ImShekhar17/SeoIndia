@@ -253,8 +253,15 @@ exports.activateSite = async (req, res, next) => {
             return res.status(404).json({ success: false, message: 'Audit not found' });
         }
 
+        // Construct the absolute Frontend URL for the audit page
+        // This ensures we index OUR site (confirmed in Search Console) and not the external site
+        const frontendUrl = process.env.FRONTEND_URL || 'https://seo.value4media.com';
+        const absoluteAuditUrl = `${frontendUrl}/audit/${audit.id}`;
+
+        console.log(`[AdminController] Triggering indexing for internal report: ${absoluteAuditUrl}`);
+
         // Trigger Real Google Indexing API
-        const indexingResult = await IndexingService.activateIndexing(audit.url);
+        const indexingResult = await IndexingService.activateIndexing(absoluteAuditUrl);
 
         await Audit.update({
             message: indexingResult.mode === 'production'

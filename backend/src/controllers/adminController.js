@@ -254,8 +254,9 @@ exports.activateSite = async (req, res, next) => {
         }
 
         // Construct the absolute Frontend URL for the audit page
-        // This ensures we index OUR site (confirmed in Search Console) and not the external site
-        const frontendUrl = process.env.FRONTEND_URL || 'https://seo.value4media.com';
+        // Ensure no double slashes if FRONTEND_URL ends with /
+        let frontendUrl = process.env.FRONTEND_URL || 'https://seo.value4media.com';
+        frontendUrl = frontendUrl.replace(/\/+$/, ''); // Remove trailing slashes
         const absoluteAuditUrl = `${frontendUrl}/audit/${audit.id}`;
 
         console.log(`[AdminController] Triggering indexing for internal report: ${absoluteAuditUrl}`);

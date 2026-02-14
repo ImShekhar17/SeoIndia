@@ -125,6 +125,7 @@ const Navbar = () => {
         { name: 'Case Studies', path: '/case-studies', hasDropdown: true },
         { name: 'SEO Audit', path: '/audit' },
         { name: 'About', path: '/about' },
+        { name: 'Contact', path: '/contact' },
     ];
 
     return (
